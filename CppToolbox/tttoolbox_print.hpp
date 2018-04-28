@@ -10,6 +10,7 @@
 #include <ctime>
 #include <cstring>
 #include <memory>
+#include <algorithm>
 
 #include <tuple>
 #include <vector>
@@ -143,7 +144,7 @@ std::string getTimeStr(const struct tm &tm, const std::string &fmt)
     if(fmt.empty())
         return "";
 
-    size_t len = std::max(32u, fmt.length() * 3);
+    size_t len = std::max((size_t)32, fmt.length() * 3);
     std::unique_ptr<char[]> buf{new char[len]};
     
     strftime(buf.get(), len, fmt.c_str(), &tm);

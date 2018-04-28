@@ -50,8 +50,8 @@ inline
 std::string strerror_r(int errnum)
 {
 	char buf[128];
-	char *cp = ::strerror_r(errnum, buf, sizeof(buf));  //refer to global one
-	return cp;
+	::strerror_r(errnum, buf, sizeof(buf));  //GNU return *cp; but XSI return int
+	return buf;
 }
 
 /*************************************************
