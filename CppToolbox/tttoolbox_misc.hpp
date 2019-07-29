@@ -75,6 +75,7 @@ int atoi(const string &str)
 /*************************************************
   split string, veturn vector
 **************************************************/
+inline
 std::vector<string> strSplit(const string &str, const string &delimiter)
 {
 	std::vector<string> v;
@@ -194,6 +195,7 @@ bool fgetline(std::istream &is, std::string &str,
  *   is: istream
  *   ret_type: newline type of the istream
 **************************************************/
+inline
 std::vector<std::string> fgetlines(std::istream &is, GetLineTypes *ret_type = 0)
 {
     std::vector<std::string> lines;

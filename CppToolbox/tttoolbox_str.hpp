@@ -49,6 +49,7 @@ bool strBeginWith(const std::string &s, const std::string &prefix)
 /**********************************************
  * definition of  whitespace
  **********************************************/
+inline
 const char *whitespace = " \t\n\r\v\f";
 
 /**********************************************

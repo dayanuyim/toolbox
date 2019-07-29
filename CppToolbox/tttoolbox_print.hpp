@@ -63,6 +63,7 @@ std::ostream& operator<<(std::ostream& os, const std::tuple<T0, T...>& t)
 	return os;
 }
 
+inline
 std::ostream& operator<<(std::ostream& os, const std::tuple<>&) //empty tuple
 {
 	return os << "{}";
